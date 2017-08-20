@@ -6,3 +6,7 @@ be useful in certain ML tasks (e.g. POS tagging, replacing brown clusters)?
 Is it even possible to find reasonable clusters and what would they look like?
 
 
+## Clustering times
+
+Of facebook embeddings:
+* wiki.en.vec: 19276 seconds (on derwent)
