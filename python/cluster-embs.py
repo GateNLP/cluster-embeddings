@@ -46,7 +46,8 @@ if(args.k):
 
 inBinary = ".bin." in inFile
 if verbose: print("Loading embeddings file ", inFile," using binary format: ",inBinary, file=sys.stderr)
-embs = gensim.models.Word2Vec.load_word2vec_format(inFile, binary=inBinary, unicode_errors='ignore', encoding='utf8')
+# embs = gensim.models.Word2Vec.load_word2vec_format(inFile, binary=inBinary, unicode_errors='ignore', encoding='utf8')
+embs = gensim.models.KeyedVectors.load_word2vec_format(inFile, binary=inBinary, unicode_errors='ignore', encoding='utf8')
 print("Embeddings file loaded,  shape (nWords, nDims): ",embs.syn0.shape)
 if debug: print("DEBUG: embeddings for 'mother': ",embs["mother"],file=sys.stderr)
 
