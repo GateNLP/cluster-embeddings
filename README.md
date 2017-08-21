@@ -9,4 +9,5 @@ Is it even possible to find reasonable clusters and what would they look like?
 ## Clustering times
 
 Of facebook embeddings:
-* wiki.en.vec: 19276 seconds (on derwent)
+* wiki.en.vec, k=100: 19276 seconds (on derwent), 44488 seconds (on zeus)
+* wiki.en.vec, k=500:   (on derwent)
