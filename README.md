@@ -1,10 +1,7 @@
-# Tool and experiments for clustering embeddings
+# Tool for clustering embeddings
 
-Basic idea: can clusters derived from pre-computed embeddings 
-be useful in certain ML tasks (e.g. POS tagging, replacing brown clusters)?
-
-Is it even possible to find reasonable clusters and what would they look like?
-
+So far, just a simple script to run a bunch of sklearn clustering algorithms
+on embeddings in word2vec format.
 
 ## Clustering times
 
