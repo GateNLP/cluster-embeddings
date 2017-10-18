@@ -3,14 +3,17 @@
 So far, just a simple script to run a bunch of sklearn clustering algorithms
 on embeddings in word2vec format.
 
+Some results on usefulness:
+* usefulness for POS tagging: https://github.com/GateNLP/exp-lf-pos
+
+
 ## Clustering times
 
-Of facebook embeddings (old runs):
-* wiki.en.vec, k=100: 19276 seconds (on derwent), 44488 seconds (on zeus)
-* wiki.en.vec, k=500:   (on derwent)
+| embeddings | machine | alg | k | elapsed time, total | elapsed time, clustering | 
+|------------|---------|-----|---|-------------|----|
+| fasttext wiki.en.vec | derwent | KMeans | 100 | 5:21:16 | ??? |
+| fasttext wiki.en.vec | derwent | MiniBatchKMeans | 100 |  0:16:37 | 0:00:38 |
+| fasttext wiki.en.vec | derwent | MiniBatchKMeans | 500 |  0:22:18 | 0:02:22 |
+| fasttext wiki.bg.vec | derwent | MiniBatchKMeans | 100 |  0:02:27 | 0:00:13 | 
+| fasttext wiki.bg.vec | derwent | MiniBatchKMeans | 500 |  0:04:42 | 0:01:18 |  
 
-Of facebook embeddings (recent runs):
-* wiki.en.vec, mbknn, k=100: 16:37 total,  38 secs for clustering (derwent)
-* wiki.en.vec, mbknn, k=500: 22:18 total, 142 secs for clustering (derwent)
-* wiki.bg.vec, mbknn, k=100:  2:27 total,  13 secs for clustering (derwent)
-* wiki.bg.vec, mbknn, k=500:  4:42 total,  78 secs for clustering (derwent) 
