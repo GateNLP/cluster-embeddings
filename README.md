@@ -6,6 +6,24 @@ on embeddings in word2vec format.
 Some results on usefulness:
 * usefulness for POS tagging: https://github.com/GateNLP/exp-lf-pos
 
+## Usage
+
+Get usage information by running:
+* `python3 ./python/cluster-embs.py -h`
+
+Currently the following clustering algorithms are supported (using the sklearn back-end). For 
+some of the algorithms, information about the clusters is written to a file with extension `info.json`:
+* MiniBatchKMeans (default): k-means clustering using minibatch SGD
+  Info: `cluster_centers`, `inertia`, `counts`, `n_iter`
+* KMeans: k-means clustering
+  Info: `cluter_centers`, `inertia`, `n_iter`
+* AgglomerativeClusteringWard: agglomerative clustering using ward linkage
+* AgglomerativeClusteringAverageEuclidean: agglomerative clustering using average linkage 
+* Birch
+* SpectralClustering: spectral clustering with rbf affinity 
+
+For MiniBatchKMeans and KMeans, the 20 elements most similar to each of the k cluster centroids 
+are stored in a file with the extension `mostsimilar.json`.
 
 ## Clustering times
 
